@@ -17,7 +17,7 @@ window.addEventListener("load", function(){
         if (max_allowed_photo_blocks) {
             setInterval(HandleOnce, CHECK_CONTENT_INTERVAL, max_allowed_photo_blocks)
         } else {
-            console.error("Internal error, launch cancelled")
+            console.info("[attachments optimizer] Cleanup policy: off")
         }
     })
 })
