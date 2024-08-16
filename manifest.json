@@ -1,0 +1,30 @@
+{
+  "name": "Vk attachments optimizer",
+  "description": "Дополнение для оптимизации просмотра вложений в чатах vk.com",
+  "version": "1.1",
+  "manifest_version": 3,
+  "permissions": ["scripting", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "logo/logo16.png",
+      "32": "logo/logo32.png",
+      "48": "logo/logo48.png",
+      "64": "logo/logo64.png",
+      "128": "logo/logo64.png"
+    }
+  },
+  "icons": {
+    "16": "logo/logo16.png",
+    "32": "logo/logo32.png",
+    "48": "logo/logo48.png",
+    "64": "logo/logo64.png",
+    "128": "logo/logo128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://vk.com/*"],
+      "js": ["src/defs.js", "src/optimizer.js", "src/main.js"]
+    }
+  ]
+}
